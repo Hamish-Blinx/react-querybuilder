@@ -3,8 +3,8 @@ import {
   errorBothQueryDefaultQuery,
   errorControlledToUncontrolled,
   errorUncontrolledToControlled,
-} from '../../messages';
-import type { RuleGroupTypeAny } from '../../types';
+} from '../messages';
+import type { RuleGroupTypeAny } from '../types';
 import { usePrevious } from './usePrevious';
 
 export interface UseControlledOrUncontrolledParams {
@@ -18,8 +18,8 @@ let didWarnUncontrolledToControlled = false;
 let didWarnControlledToUncontrolled = false;
 
 /**
- * Log errors when the component changes from controlled to uncontrolled,
- * vice versa, or both query and defaultQuery are provided.
+ * Logs a warning when the component changes from controlled to uncontrolled,
+ * vice versa, or both `query` and `defaultQuery` are provided.
  */
 export const useControlledOrUncontrolled = ({
   defaultQuery,
